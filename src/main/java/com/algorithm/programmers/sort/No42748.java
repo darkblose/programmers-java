@@ -1,12 +1,15 @@
 package com.algorithm.programmers.sort;
 
+import org.springframework.stereotype.Component;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
+@Component
 public class No42748 {
-    public static void main(String[] args) throws IOException {
+    public void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());
@@ -30,7 +33,7 @@ public class No42748 {
         System.out.println("answer = " + Arrays.toString(answer));
     }
 
-    private static int[] solution1(int[] array, int[][] commands) {
+    public int[] solution1(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
         for (int i = 0; i < commands.length; i++) {
             List<Integer> listTmp = new ArrayList<>();
@@ -44,7 +47,7 @@ public class No42748 {
         return answer;
     }
 
-    private static int[] solution2(int[] array, int[][] commands) {
+    public int[] solution2(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
         for (int i = 0; i < commands.length; i++) {
             int[] arrayTmp = Arrays.copyOfRange(array, commands[i][0] - 1, commands[i][1]);

@@ -1,10 +1,11 @@
 package com.algorithm.programmers.sort;
 
 import lombok.extern.slf4j.Slf4j;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 @Slf4j
 @SpringBootTest
@@ -20,8 +21,7 @@ class No42746Test {
         //when
         String result = no42746.comparatorSort(testCase1);
         //then
-        Assertions.assertThat(result).isEqualTo("6210");
-        System.out.println("result = " + result);
+        assertThat(result).isEqualTo("6210");
         log.info("result = {}", result);
     }
 
@@ -32,8 +32,7 @@ class No42746Test {
         //when
         String result = no42746.comparatorSort(testCase2);
         //then
-        Assertions.assertThat(result).isEqualTo("9534330");
-        System.out.println("result = " + result);
+        assertThat(result).isEqualTo("9534330");
         log.info("result = {}", result);
     }
 }

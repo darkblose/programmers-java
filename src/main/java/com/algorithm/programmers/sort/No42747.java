@@ -1,13 +1,16 @@
 package com.algorithm.programmers.sort;
 
+import org.springframework.stereotype.Component;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
+@Component
 public class No42747 {
-    public static void main(String[] args) throws IOException {
+    public void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         int[] citations = new int[n];
@@ -21,7 +24,7 @@ public class No42747 {
         System.out.println("answer = " + answer);
     }
 
-    private static int solution(int[] citations) {
+    public int solution(int[] citations) {
         int answer = citations.length;
         Arrays.sort(citations);
         for (int citation : citations) {
