@@ -19,14 +19,18 @@ class No42748Test {
 
     @Test
     void fori() {
+        //when
         int[] result = no42748.solution1(array, commands);
+        //then
         assertThat(result).isEqualTo(answer);
         log.info("result = {}", result);
     }
 
     @Test
     void copyOfRange() {
+        //when
         int[] result = no42748.solution2(array, commands);
+        //then
         assertThat(result).isEqualTo(answer);
         log.info("result = {}", result);
     }

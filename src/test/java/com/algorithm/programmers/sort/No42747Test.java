@@ -16,9 +16,13 @@ class No42747Test {
 
     @Test
     void 테케1() {
+        //given
         int[] citations = new int[]{3, 0, 6, 1, 5};
+        int answer = 3;
+        //when
         int result = no42747.solution(citations);
-        assertThat(result).isEqualTo(3);
+        //then
+        assertThat(result).isEqualTo(answer);
         log.info("result = {}", result);
     }
 }

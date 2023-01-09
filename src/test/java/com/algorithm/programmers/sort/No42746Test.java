@@ -18,10 +18,11 @@ class No42746Test {
     void 테케1() {
         //given
         int[] testCase1 = new int[]{6, 10, 2};
+        String answer = "6210";
         //when
         String result = no42746.comparatorSort(testCase1);
         //then
-        assertThat(result).isEqualTo("6210");
+        assertThat(result).isEqualTo(answer);
         log.info("result = {}", result);
     }
 
@@ -29,10 +30,11 @@ class No42746Test {
     void 테케2() {
         //given
         int[] testCase2 = {3, 30, 34, 5, 9};
+        String answer = "9534330";
         //when
         String result = no42746.comparatorSort(testCase2);
         //then
-        assertThat(result).isEqualTo("9534330");
+        assertThat(result).isEqualTo(answer);
         log.info("result = {}", result);
     }
 }
