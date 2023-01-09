@@ -1,4 +1,6 @@
-package sort;
+package com.algorithm.programmers.sort;
+
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,8 +8,9 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
+@Component
 public class No42746 {
-    public static void main(String[] args) throws IOException {
+    public void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         int[] numbers = new int[n];
@@ -24,7 +27,7 @@ public class No42746 {
         System.out.println("answer = " + answer);
     }
 
-    private static String bubbleSort(int[] numbers) {
+    public String bubbleSort(int[] numbers) {
         StringBuilder sb;
         String answer;
         int length = numbers.length;
@@ -61,7 +64,7 @@ public class No42746 {
         return answer;
     }
 
-    private static String bubbleSortRev(int[] numbers) {
+    public String bubbleSortRev(int[] numbers) {
         String answer = "0";
         int length = numbers.length;
         int index = 0;
@@ -93,7 +96,7 @@ public class No42746 {
         return answer;
     }
 
-    private static String comparatorSort(int[] numbers) {
+    public String comparatorSort(int[] numbers) {
         String answer = "0";
         String[] stringNumbers = new String[numbers.length];
         for (int i = 0; i < numbers.length; i++) {
@@ -110,7 +113,7 @@ public class No42746 {
         return answer;
     }
 
-    private static String solution(int[] numbers) {
+    public String solution(int[] numbers) {
         String answer = "";
         int[][] numArray = new int[numbers.length][2];
         for (int i = 0; i < numbers.length; i++) {
